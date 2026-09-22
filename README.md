@@ -155,7 +155,7 @@ The blank QR grid used on this form is adapted from Blockstream's [CompactSeedQR
 - Write the master fingerprint in the box under the QR as well, so this page can be identified even if separated from page 1.
 - **Never scan this QR with any device connected to the internet.** Only scan it with the same type of dedicated, offline hardware wallet used to generate it, and only when you actually need to restore from it.
 
-### Step 6: Transfer to steel, then destroy this page
+### Step 6: Transfer to steel
 
 Once you've verified every word and the wallet details are correct:
 
@@ -166,6 +166,14 @@ Once you've verified every word and the wallet details are correct:
 ### Never digitize this page
 
 Do not photograph, scan, or type any of these words, or the SeedQR, into any phone, computer, or cloud service, at any point, for any reason. A single photo of this page on a networked device can expose your entire wallet.
+
+## How to Use `Bitcoin-Single-Sig-Key-Ceremony.pdf`
+
+This is the master procedure that ties the other three documents together. It walks through the entire process end to end, gathering materials, a rehearsal with a throwaway test seed, generating real entropy with the dice worksheet, entering it into your hardware wallet, recording the backup, transferring to steel, and a small-amount funding test with dry-run recovery, followed by a Ceremony Record to fill in once you're done.
+
+**To use it:** print it out and follow it phase by phase, in order, checking off each box as you complete it. Don't skip Phase 2 (Rehearsal), running through the whole workflow once with a disposable test seed is what catches mistakes before they matter. Have the other three documents (dice worksheet, word reference table, seed backup form) on hand, since this procedure references them directly at the relevant steps.
+
+The Ceremony Record section at the end contains no seed material, only dates, wallet parameters (fingerprint, derivation path, script type), and a verification checklist, so it's safe to file with your other administrative records, separate from your actual seed backups.
 
 ## Verify File Integrity (SHA-256)
 
