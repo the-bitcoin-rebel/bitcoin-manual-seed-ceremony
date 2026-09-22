@@ -88,6 +88,16 @@ Word 24 is not generated with dice. It contains the mandatory BIP-39 checksum bi
 
 This sheet uses a fixed, unbiased mapping (dice faces 1–3 → `0`, faces 4–6 → `1`) rather than assigning individual faces to specific bit positions. This averages out any small manufacturing bias in a given die across three faces instead of resting on a single face, which is the more bias-resistant of the two common dice-to-bit methods. Using several dice from different manufacturers or styles, rolled in a cup or box rather than by hand, further reduces the chance that any single die's bias skews your results, no realistic manufacturing bias in an ordinary die comes close to affecting the security of the resulting seed, but these habits cost nothing and remove any doubt.
 
+## How to Use `2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf`
+
+This is the lookup table for turning the numbers you calculated with `1-Binary-to-Decimal-Conversion-Table.pdf` into actual seed words.
+
+Each of the 23 pages lists two columns of entries, sorted from 0 to 2047. Every row shows three things: the **decimal number** (0–2047), the same value written out as an **11-bit binary number**, and the **word** it corresponds to in the official BIP-39 word list.
+
+To use it: take the decimal number you calculated for a given row on the dice worksheet, find that same number in the "Decimal" column here, and the word next to it is your seed word for that position. The binary column is there so you can also cross-check your handwritten binary digits directly against the table, if you want a second way to catch a mistake.
+
+Remember the list starts at **0** (`abandon`), not 1.
+
 ## How to Use `3-Seed-Phrase-Paper-Backup.pdf`
 
 This form is where you record your seed phrase and wallet details right after generating them **on paper, offline, as a temporary backup only.** It is not a substitute for a steel backup; it exists to bridge the gap between generating your seed and engraving it onto steel.
