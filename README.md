@@ -5,6 +5,16 @@ Generate a BIP-39 seed phrase from physical dice rolls instead of trusting a dev
 
 This project is provided for free, with no warranty of any kind. You are solely responsible for verifying every step yourself before using it to generate a seed phrase that will secure real funds. Test the entire process with a throwaway seed first. If you don't fully understand a step, stop and research it before continuing, mistakes here can mean permanent loss of funds.
 
+# Acknowledgements
+
+This project builds on the work of others who researched and published on dice-based seed generation long before this repository existed. Thank you to:
+
+- **Valerio Vaccaro** : [TRMG](https://valerio-vaccaro.github.io/TRMG/), a free, open-source tool for converting dice rolls into BIP-39 entropy.
+- **SeedSigner** : the open-source hardware wallet project, whose [dice verification documentation](https://github.com/SeedSigner/seedsigner/blob/dev/docs/dice_verification.md) explains the underlying math and security considerations of dice-based entropy in detail.
+- **Arman The Parman"** : his [guide to generating a Bitcoin seed with dice](https://armantheparman.com/bitcoin-seed-with-dice/), which this project's dice-to-bit conversion method (faces 1–3 → 0, faces 4–6 → 1) is based on.
+
+Without this prior open-source and educational work, this project would not have been possible.
+
 ## Contents
 
 | File | Purpose |
@@ -29,11 +39,11 @@ This worksheet converts physical dice rolls into the numbers used to pick your s
 
 Do this offline, away from cameras and networked devices. See the [key ceremony procedure](./Bitcoin-Single-Sig-Key-Ceremony.pdf) for full operational security guidance.
 
-### Step 1 — Convert each dice roll to a 0 or 1
+### Step 1: Convert each dice roll to a 0 or 1
 
-Each row has 11 columns, headed `1024 512 256 128 64 32 16 8 4 2 1`. These are binary place values — together they let you write any number from 0 to 2047, which is exactly the range of the BIP-39 word list (2048 words, indexed 0–2047).
+Each row has 11 columns, headed `1024 512 256 128 64 32 16 8 4 2 1`. These are binary place values, together they let you write any number from 0 to 2047, which is exactly the range of the BIP-39 word list (2048 words, indexed 0–2047).
 
-Roll once for every column, left to right — either rolling one die 11 times, or rolling several of your dice together and reading them off in a consistent order — and convert each roll using this key:
+Roll once for every column, left to right, either rolling one die 11 times, or rolling several of your dice together and reading them off in a consistent order, and convert each roll using this key:
 
 | Die shows | Write |
 |---|---|
@@ -42,7 +52,7 @@ Roll once for every column, left to right — either rolling one die 11 times, o
 
 Write the resulting `0` or `1` in the box under the matching column. By the time you reach the end of the row, you'll have 11 rolls converted into an 11-digit binary number.
 
-### Step 2 — Convert the row to a decimal number
+### Step 2: Convert the row to a decimal number
 
 Add up only the column headings where you wrote a `1`. Ignore the columns where you wrote a `0`. The result is a number between 0 and 2047, write it in the box at the end of the row (labeled `1#`, `2#`, etc.).
 
@@ -56,7 +66,7 @@ Add up only the column headings where you wrote a `1`. Ignore the columns where 
 
 Write **1365** in the box at the end of row 1. That's the number you'll look up in `2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf` to find word 1 of your seed phrase.
 
-### Step 3 — Repeat for rows 2 through 23
+### Step 3: Repeat for rows 2 through 23
 
 Do the same for every remaining row: 11 fresh dice rolls per row, converted to a binary number, then added up into a single decimal number from 0–2047. Each row gives you the number for the corresponding seed word, row 2 gives you word 2, and so on through row 23.
 
@@ -97,3 +107,4 @@ Before using any of these documents for a real seed ceremony, verify that the fi
 A full walkthrough with screenshots-free step-by-step instructions for each OS is also published at [thebitcoinrebel.com/projects](https://thebitcoinrebel.com/projects).
 
 If a checksum doesn't match, do not use the file, delete it, re-download it from this repository, and check again.
+
