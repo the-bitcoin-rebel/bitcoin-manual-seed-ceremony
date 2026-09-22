@@ -88,6 +88,77 @@ Word 24 is not generated with dice. It contains the mandatory BIP-39 checksum bi
 
 This sheet uses a fixed, unbiased mapping (dice faces 1–3 → `0`, faces 4–6 → `1`) rather than assigning individual faces to specific bit positions. This averages out any small manufacturing bias in a given die across three faces instead of resting on a single face, which is the more bias-resistant of the two common dice-to-bit methods. Using several dice from different manufacturers or styles, rolled in a cup or box rather than by hand, further reduces the chance that any single die's bias skews your results, no realistic manufacturing bias in an ordinary die comes close to affecting the security of the resulting seed, but these habits cost nothing and remove any doubt.
 
+## How to Use `3-Seed-Phrase-Paper-Backup.pdf`
+
+This form is where you record your seed phrase and wallet details right after generating them **on paper, offline, as a temporary backup only.** It is not a substitute for a steel backup; it exists to bridge the gap between generating your seed and engraving it onto steel.
+
+### Before you start
+
+Do this offline, away from cameras, microphones, and any networked device.
+
+### Step 1: Multisig checkbox
+
+At the top of page 1, check whether this seed is part of a multisig setup. If yes, check "Yes" and fill in the quorum (e.g. "2 of 3"). If this is a single-sig wallet, check "No".
+
+If you're setting up a multisig wallet, it's also essential to save the **wallet descriptor** (or a full export of your multisig configuration from your coordinator, e.g. Sparrow). Without it, having all the individual seeds is not enough to restore your multisig wallet, the descriptor records exactly how those seeds combine (which xpubs, in what order, with what quorum and script type) and is required to reconstruct the wallet correctly.
+
+### Step 2: Write down the 24 seed words
+
+In the "Seed Words" grid, write words #1–24 exactly as they are numbered and exactly as your device displays them.
+
+- Write **one word at a time**, copying it directly from its source, either the BIP-39 word reference table as you look up each word during the dice-to-word conversion, or your device's screen once you've entered the seed into it. Never from memory, and never by dictating it to someone else.
+- After filling in all 24, go back and read each word on the page against your device's screen a second time, word by word, to catch any transcription mistakes.
+- Word #24 always comes from your device, never from the reference table: it's the checksum word your hardware wallet calculates for you.
+
+### Step 3: Wallet details
+
+Fill in the panel below the seed words:
+
+| Field | What to write |
+|---|---|
+| Master fingerprint | The 8-character hex ID your wallet displays for this seed (not secret, safe to write in plain text) |
+| Derivation path | The derivation path shown by your wallet software (e.g. `m/84'/0'/0'`) |
+| Script type | The address type this wallet uses (e.g. Native SegWit) |
+| H.W or software wallet used | The device/app you used (e.g. SeedSigner, Sparrow) |
+| Firmware version | The firmware version running on your hardware wallet at the time |
+| Device serial no. | Your device's serial number, if it has one |
+
+None of these fields reveal your seed on their own, but keep the whole page as confidential as the seed itself, since it identifies which wallet the seed unlocks.
+
+Once this panel is filled in, also copy these same wallet detail fields: master fingerprint, derivation path, script type, wallet/device used, firmware version, device serial no., into your password manager, along with the **xpub**, **zpub**, and **first receiving address** from your watch-only wallet setup (e.g. Sparrow). **Do NOT enter the seed phrase itself into the password manager under any circumstances.** None of these additional values can move or spend funds on their own, they only let you identify the wallet, generate receiving addresses, and confirm you're looking at the right wallet later; the seed phrase must exist only on paper/steel, never digitally.
+
+### Step 4: Notes on seed generation
+
+Check the box that matches how this seed's entropy was actually generated: the hardware wallet's own random number generator (TRNG), or user-supplied entropy such as dice rolls.
+
+### Step 5: SeedQR (page 2)
+
+Page 2 holds a **SeedQR**: a QR-code encoding of your seed phrase, used to re-import your seed quickly into a compatible air-gapped wallet without typing all 24 words by hand.
+
+The SeedQR format was created by the open-source [SeedSigner](https://github.com/SeedSigner/seedsigner) project.
+See their [SeedQR documentation](https://github.com/SeedSigner/seedsigner/blob/dev/docs/seed_qr/README.md) for the full technical spec.
+
+The blank QR grid used on this form is adapted from Blockstream's [CompactSeedQR template](https://storage.googleapis.com/dxp-production-assets/content/blockstream-jade/use-jade-air-gapped/create-a-seedqr-from-my-recovery-phrase/CompactSeedQRTemplate-new.pdf), published as part of their Jade air-gapped wallet documentation.
+
+Page 2 holds a **SeedQR**, a QR-code encoding of your seed phrase, used to re-import your seed quickly into a compatible air-gapped wallet without typing all 24 words by hand.
+
+- Generate the SeedQR on your air-gapped hardware wallet (e.g. Jade+ or SeedSigner's "Seed QR" export feature).
+- Hand-copy the black/white grid square by square from your device's screen onto the grid provided, checking your work square by square as you go.
+- Write the master fingerprint in the box under the QR as well, so this page can be identified even if separated from page 1.
+- **Never scan this QR with any device connected to the internet.** Only scan it with the same type of dedicated, offline hardware wallet used to generate it, and only when you actually need to restore from it.
+
+### Step 6: Transfer to steel, then destroy this page
+
+Once you've verified every word and the wallet details are correct:
+
+1. Copy everything: words, wallet details, and SeedQR, onto a fireproof, waterproof steel backup.
+2. Verify the steel backup against this paper copy, word by word. Beyond this visual check, also perform the full dry-run recovery described in the [key ceremony procedure](./Bitcoin-Single-Sig-Key-Ceremony.pdf), restoring the seed from the steel backup into your device, to confirm the steel backup actually works, not just that it matches on paper.
+3. Since the wallet details (master fingerprint, derivation path, script type, xpub, zpub, first address, etc.) also already live in your password manager from Step 3, you don't strictly need to keep this paper form around afterward for that information, the only thing that must survive is the seed phrase itself on steel. If you'd still rather keep this paper as a secondary reference, that's fine, but getting a copy onto steel is the non-negotiable part.
+
+### Never digitize this page
+
+Do not photograph, scan, or type any of these words, or the SeedQR, into any phone, computer, or cloud service, at any point, for any reason. A single photo of this page on a networked device can expose your entire wallet.
+
 ## Verify File Integrity (SHA-256)
 
 Before using any of these documents for a real seed ceremony, verify that the file on your computer is byte-for-byte identical to what's published here (and here: https://www.thebitcoinrebel.com/projects/), not a corrupted download, and not a file that's been tampered with somewhere along the way.
