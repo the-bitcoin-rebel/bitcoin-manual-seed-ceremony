@@ -167,7 +167,7 @@ Before using any of these documents for a real seed ceremony, verify that the fi
 |---|---|
 | `1-Binary-to-Decimal-Conversion-Table.pdf` | `19d9b9c54ff35dee3191a658c4da75d10528841f356557197301448972f96b64` |
 | `2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf` | `178b83d1d3e23c78de43164f77ca8da8c5ad927d14dd7e20b91b8fc6612a48c1` |
-| `3-Seed-Phrase-Paper-Backup.pdf` | `f3024e45c1d91a7199f29fc0b308c3a674a406e52b5fa8295d1241ef9e838283` |
+| `3-Seed-Phrase-Paper-Backup.pdf` | `94f4fa143cd96becfb8b7d68157337a0d0669aa49322c4aba2e397f6cd0f80f5` |
 | `Bitcoin-Single-Sig-Key-Ceremony.pdf` | `135c01ff281ba090d103565db946259d4e201b5434b408179515950bcafcfcef` |
 
 **Linux:** `sha256sum <file>`
