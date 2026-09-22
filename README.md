@@ -70,6 +70,8 @@ Add up only the column headings where you wrote a `1`. Ignore the columns where 
 
 Write **1365** in the box at the end of row 1. That's the number you'll look up in `2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf` to find word 1 of your seed phrase.
 
+In this example, decimal `1365` → binary `10101010101` → the word **primary**.
+
 ### Step 3: Repeat for rows 2 through 23
 
 Do the same for every remaining row: 11 fresh dice rolls per row, converted to a binary number, then added up into a single decimal number from 0–2047. Each row gives you the number for the corresponding seed word, row 2 gives you word 2, and so on through row 23.
