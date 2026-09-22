@@ -5,6 +5,10 @@ Generate a BIP-39 seed phrase from physical dice rolls instead of trusting a dev
 
 This project is provided for free, with no warranty of any kind. You are solely responsible for verifying every step yourself before using it to generate a seed phrase that will secure real funds. Test the entire process with a throwaway seed first. If you don't fully understand a step, stop and research it before continuing. Mistakes here can mean permanent loss of funds.
 
+## Need Help?
+
+If you'd like specialized, one-on-one consulting on your setup, you can contact us through [thebitcoinrebel.com](https://thebitcoinrebel.com).
+
 ## Acknowledgements
 
 This project builds on the work of others who researched and published on dice-based seed generation long before this repository existed. Thank you to:
