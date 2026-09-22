@@ -3,15 +3,15 @@ Generate a BIP-39 seed phrase from physical dice rolls instead of trusting a dev
 
 ## ⚠️ Disclaimer
 
-This project is provided for free, with no warranty of any kind. You are solely responsible for verifying every step yourself before using it to generate a seed phrase that will secure real funds. Test the entire process with a throwaway seed first. If you don't fully understand a step, stop and research it before continuing, mistakes here can mean permanent loss of funds.
+This project is provided for free, with no warranty of any kind. You are solely responsible for verifying every step yourself before using it to generate a seed phrase that will secure real funds. Test the entire process with a throwaway seed first. If you don't fully understand a step, stop and research it before continuing. Mistakes here can mean permanent loss of funds.
 
-# Acknowledgements
+## Acknowledgements
 
 This project builds on the work of others who researched and published on dice-based seed generation long before this repository existed. Thank you to:
 
-- **Valerio Vaccaro** : [TRMG](https://valerio-vaccaro.github.io/TRMG/), a free, open-source tool for converting dice rolls into BIP-39 entropy.
-- **SeedSigner** : the open-source hardware wallet project, whose [dice verification documentation](https://github.com/SeedSigner/seedsigner/blob/dev/docs/dice_verification.md) explains the underlying math and security considerations of dice-based entropy in detail.
-- **Arman The Parman"** : his [guide to generating a Bitcoin seed with dice](https://armantheparman.com/bitcoin-seed-with-dice/), which this project's dice-to-bit conversion method (faces 1–3 → 0, faces 4–6 → 1) is based on.
+- **Valerio Vaccaro**: [TRMG](https://valerio-vaccaro.github.io/TRMG/), a free, open-source tool for converting dice rolls into BIP-39 entropy.
+- **SeedSigner**: the open-source hardware wallet project, whose [dice verification documentation](https://github.com/SeedSigner/seedsigner/blob/dev/docs/dice_verification.md) explains the underlying math and security considerations of dice-based entropy in detail.
+- **Arman The Parman"**: his [guide to generating a Bitcoin seed with dice](https://armantheparman.com/bitcoin-seed-with-dice/), which this project's dice-to-bit conversion method (faces 1–3 → 0, faces 4–6 → 1) is based on.
 
 Without this prior open-source and educational work, this project would not have been possible.
 
@@ -26,7 +26,7 @@ Without this prior open-source and educational work, this project would not have
 
 ## How to Use `1-Binary-to-Decimal-Conversion-Table.pdf`
 
-This worksheet converts physical dice rolls into the numbers used to pick your seed words from `2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf`. Each of the 23 rows on the sheet corresponds to one seed word. Word 24 is **not** rolled, see the note below.
+This worksheet converts physical dice rolls into the numbers used to pick your seed words from `2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf`. Each of the 23 rows on the sheet corresponds to one seed word. Word 24 is **not** rolled. See the note below.
 
 ### What you need
 
@@ -140,8 +140,6 @@ See their [SeedQR documentation](https://github.com/SeedSigner/seedsigner/blob/d
 
 The blank QR grid used on this form is adapted from Blockstream's [CompactSeedQR template](https://storage.googleapis.com/dxp-production-assets/content/blockstream-jade/use-jade-air-gapped/create-a-seedqr-from-my-recovery-phrase/CompactSeedQRTemplate-new.pdf), published as part of their Jade air-gapped wallet documentation.
 
-Page 2 holds a **SeedQR**, a QR-code encoding of your seed phrase, used to re-import your seed quickly into a compatible air-gapped wallet without typing all 24 words by hand.
-
 - Generate the SeedQR on your air-gapped hardware wallet (e.g. Jade+ or SeedSigner's "Seed QR" export feature).
 - Hand-copy the black/white grid square by square from your device's screen onto the grid provided, checking your work square by square as you go.
 - Write the master fingerprint in the box under the QR as well, so this page can be identified even if separated from page 1.
@@ -175,7 +173,7 @@ Before using any of these documents for a real seed ceremony, verify that the fi
 **Windows (PowerShell):** `Get-FileHash .\<file> -Algorithm SHA256`
 **Windows (Command Prompt):** `certutil -hashfile <file> SHA256`
 
-These same checksums are also published at thebitcoinrebel.com/projects as an independent reference. Check them there too, before trusting the values in this repo.
+These same checksums are also published at [thebitcoinrebel.com/projects](https://www.thebitcoinrebel.com/projects/) as an independent reference. Check them there too, before trusting the values in this repo.
 
 If a checksum doesn't match, do not use the file, delete it, re-download it from this repository, and check again.
 
