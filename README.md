@@ -175,7 +175,7 @@ Before using any of these documents for a real seed ceremony, verify that the fi
 **Windows (PowerShell):** `Get-FileHash .\<file> -Algorithm SHA256`
 **Windows (Command Prompt):** `certutil -hashfile <file> SHA256`
 
-A full walkthrough with screenshots-free step-by-step instructions for each OS is also published at [thebitcoinrebel.com/projects](https://thebitcoinrebel.com/projects).
+These same checksums are also published at thebitcoinrebel.com/projects as an independent reference. Check them there too, before trusting the values in this repo.
 
 If a checksum doesn't match, do not use the file, delete it, re-download it from this repository, and check again.
 
