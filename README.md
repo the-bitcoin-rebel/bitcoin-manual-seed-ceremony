@@ -15,7 +15,8 @@ This project builds on the work of others who researched and published on dice-b
 
 - **Valerio Vaccaro**: [TRMG](https://valerio-vaccaro.github.io/TRMG/), a free, open-source tool for converting dice rolls into BIP-39 entropy.
 - **SeedSigner**: the open-source hardware wallet project, whose [dice verification documentation](https://github.com/SeedSigner/seedsigner/blob/dev/docs/dice_verification.md) explains the underlying math and security considerations of dice-based entropy in detail.
-- **Arman The Parman"**: his [guide to generating a Bitcoin seed with dice](https://armantheparman.com/bitcoin-seed-with-dice/), which this project's dice-to-bit conversion method (faces 1–3 → 0, faces 4–6 → 1) is based on.
+- **Arman The Parman**: his [guide to generating a Bitcoin seed with dice](https://armantheparman.com/bitcoin-seed-with-dice/), which this project's dice-to-bit conversion method (faces 1–3 → 0, faces 4–6 → 1) is based on.
+- **Side of Burritos**: [sideofburritos.com](https://sideofburritos.com/).
 
 Without this prior open-source and educational work, this project would not have been possible.
 
