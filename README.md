@@ -16,7 +16,6 @@ This project builds on the work of others who researched and published on dice-b
 - **Valerio Vaccaro**: [TRMG](https://valerio-vaccaro.github.io/TRMG/), a free, open-source tool for converting dice rolls into BIP-39 entropy.
 - **SeedSigner**: the open-source hardware wallet project, whose [dice verification documentation](https://github.com/SeedSigner/seedsigner/blob/dev/docs/dice_verification.md) explains the underlying math and security considerations of dice-based entropy in detail.
 - **Arman The Parman**: his [guide to generating a Bitcoin seed with dice](https://armantheparman.com/bitcoin-seed-with-dice/), which this project's dice-to-bit conversion method (faces 1–3 → 0, faces 4–6 → 1) is based on.
-- **Side of Burritos**: [sideofburritos.com](https://sideofburritos.com/).
 
 Without this prior open-source and educational work, this project would not have been possible.
 
@@ -125,6 +124,7 @@ In the "Seed Words" grid, write words #1–24 exactly as they are numbered and e
 
 - Write **one word at a time**, copying it directly from its source, either the BIP-39 word reference table as you look up each word during the dice-to-word conversion, or your device's screen once you've entered the seed into it. Never from memory, and never by dictating it to someone else.
 - After filling in all 24, go back and read each word on the page against your device's screen a second time, word by word, to catch any transcription mistakes.
+Some wallets don't redisplay the mnemonic once entered, so you can't check it word-by-word. Instead: note the master fingerprint, then re-enter all 24 words a second time, independently, and compare fingerprints. A match confirms your entry was correct; if they differ, re-enter carefully against your paper.
 - Word #24 always comes from your device, never from the reference table: it's the checksum word your hardware wallet calculates for you.
 
 ### Step 3: Wallet details
@@ -188,10 +188,10 @@ Before using any of these documents for a real seed ceremony, verify that the fi
 
 | File | SHA-256 Checksum |
 |---|---|
-| `1-Binary-to-Decimal-Conversion-Table.pdf` | `19d9b9c54ff35dee3191a658c4da75d10528841f356557197301448972f96b64` |
-| `2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf` | `178b83d1d3e23c78de43164f77ca8da8c5ad927d14dd7e20b91b8fc6612a48c1` |
-| `3-Seed-Phrase-Paper-Backup.pdf` | `94f4fa143cd96becfb8b7d68157337a0d0669aa49322c4aba2e397f6cd0f80f5` |
-| `Bitcoin-Single-Sig-Key-Ceremony.pdf` | `135c01ff281ba090d103565db946259d4e201b5434b408179515950bcafcfcef` |
+| `1-Binary-to-Decimal-Conversion-Table-v0.1.pdf` | `4fcc5524004806982806f7cfde45b1ba066889e35ea140faa92ea438e54d7713` |
+| `2-BIP-39-Decimal-Binary-Word-Reference-Table-v0.1.pdf` | `4c0db7cedef0e0ffa7a2c992bd68a563e6fa627e7bc47f6abc593f4a3589e427` |
+| `3-Seed-Phrase-Paper-Backup-v0.1.pdf` | `ae94039245174ef767bba6701fda5bfd3d8ec245b820a92077f07b925cc256a6` |
+| `Bitcoin-Single-Sig-Key-Ceremony-v0.1.pdf` | `3c28d60b4d667de900878eb3e5ef841193bb27d6d7aac6009ee66c4ea80cd970` |
 
 **Linux:** `sha256sum <file>`
 **macOS:** `shasum -a 256 <file>`
