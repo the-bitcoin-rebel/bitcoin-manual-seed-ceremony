@@ -47,7 +47,7 @@ Do this offline, away from cameras and networked devices. See the [key ceremony 
 
 Each row has 11 columns, headed `1024 512 256 128 64 32 16 8 4 2 1`. These are binary place values, together they let you write any number from 0 to 2047, which is exactly the range of the BIP-39 word list (2048 words, indexed 0–2047).
 
-Roll once for every column, left to right, either rolling one die 11 times, or rolling several of your dice together and reading them off in a consistent order, and convert each roll using this key:
+Roll once for every column, left to right, using several of your dice together and reading them off in a consistent order each time, and convert each roll using this key:
 
 | Die shows | Write |
 |---|---|
