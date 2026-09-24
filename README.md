@@ -189,7 +189,7 @@ Before using any of these documents for a real seed ceremony, verify that the fi
 | File | SHA-256 Checksum |
 |---|---|
 | `1-Binary-to-Decimal-Conversion-Table-v0.1.pdf` | `4fcc5524004806982806f7cfde45b1ba066889e35ea140faa92ea438e54d7713` |
-| `2-BIP-39-Decimal-Binary-Word-Reference-Table-v0.1.pdf` | `4c0db7cedef0e0ffa7a2c992bd68a563e6fa627e7bc47f6abc593f4a3589e427` |
+| `2-BIP-39-Decimal-Binary-Word-Reference-Table-v0.1.pdf` | `6c3604518c9a327ac2e146607b912cb4aa156b3dd1ed8595811cf84032db7d4e` |
 | `3-Seed-Phrase-Paper-Backup-v0.1.pdf` | `ae94039245174ef767bba6701fda5bfd3d8ec245b820a92077f07b925cc256a6` |
 | `Bitcoin-Single-Sig-Key-Ceremony-v0.1.pdf` | `3c28d60b4d667de900878eb3e5ef841193bb27d6d7aac6009ee66c4ea80cd970` |
 
