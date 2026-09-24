@@ -170,7 +170,7 @@ The blank QR grid used on this form is adapted from Blockstream's [CompactSeedQR
 Once you've verified every word and the wallet details are correct:
 
 1. Copy everything: words, wallet details, and SeedQR, onto a fireproof, waterproof steel backup.
-2. Verify the steel backup against this paper copy, word by word. Beyond this visual check, also perform the full dry-run recovery described in the [key ceremony procedure](./Bitcoin-Single-Sig-Key-Ceremony.pdf), restoring the seed from the steel backup into your device, to confirm the steel backup actually works, not just that it matches on paper.
+2. Verify the steel backup against this paper copy, word by word. Beyond this visual check, also perform the full dry-run recovery described in the [key ceremony procedure](https://github.com/the-bitcoin-rebel/bitcoin-manual-seed-ceremony/blob/main/Bitcoin-Single-Sig-Key-Ceremony.pdf), restoring the seed from the steel backup into your device, to confirm the steel backup actually works, not just that it matches on paper. Once restored, export the wallet again (e.g. to Sparrow) and verify the addresses shown match the ones from your original setup.
 3. Since the wallet details (master fingerprint, derivation path, script type, xpub, zpub, first address, etc.) also already live in your password manager from Step 3, you don't strictly need to keep this paper form around afterward for that information, the only thing that must survive is the seed phrase itself on steel. If you'd still rather keep this paper as a secondary reference, that's fine, but getting a copy onto steel is the non-negotiable part.
 
 ### Never digitize this page
