@@ -124,11 +124,10 @@ If you're setting up a multisig wallet, it's also essential to save the **wallet
 
 ### Step 2: Write down the 24 seed words
 
-In the "Seed Words" grid, write words #1–24 exactly as they are numbered and exactly as your device displays them.
+In the "Seed Words" grid, write words #1–24 exactly as they are numbered, copying each one from your `1-Binary-to-Decimal-Conversion-Table.pdf` worksheet (or your device's screen) exactly as recorded there.
 
 - Write **one word at a time**, copying it directly from its source, either the BIP-39 word reference table as you look up each word during the dice-to-word conversion, or your device's screen once you've entered the seed into it. Never from memory, and never by dictating it to someone else.
-- After filling in all 24, go back and read each word on the page against your device's screen a second time, word by word, to catch any transcription mistakes.
-Some wallets don't redisplay the mnemonic once entered, so you can't check it word-by-word. Instead: note the master fingerprint, then re-enter all 24 words a second time, independently, and compare fingerprints. A match confirms your entry was correct; if they differ, re-enter carefully against your paper.
+- After filling in all 24, go back and read each word on the page against your device's screen a second time, word by word, to catch any transcription mistakes. Some wallets don't redisplay the mnemonic once entered, so this check isn't possible. If yours doesn't, note the master fingerprint instead, then re-enter all 24 words a second time, independently, and compare fingerprints. A match confirms your entry was correct; if they differ, re-enter carefully against your paper.
 - Word #24 always comes from your device, never from the reference table: it's the checksum word your hardware wallet calculates for you.
 
 ### Step 3: Wallet details
