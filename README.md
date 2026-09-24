@@ -54,7 +54,7 @@ Roll once for every column, left to right, using several of your dice together a
 | 1, 2, or 3 | `0` |
 | 4, 5, or 6 | `1` |
 
-Write the resulting `0` or `1` in the box under the matching column. By the time you reach the end of the row, you'll have 11 rolls converted into an 11-digit binary number.
+Write the resulting `0` or `1` in the box above the matching column heading. By the time you reach the end of the row, you'll have 11 rolls converted into an 11-digit binary number.
 
 ### Step 2: Convert the row to a decimal number
 
@@ -62,9 +62,9 @@ Add up only the column headings where you wrote a `1`. Ignore the columns where 
 
 **Worked example (row 1):**
 
-| 1024 | 512 | 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|   1  |  0  |  1  |  0  |  1 |  0 |  1 | 0 | 1 | 0 | 1 |
 |------|-----|-----|-----|----|----|----|---|---|---|---|
-|  1   |  0  |  1  |  0  |  1 |  0 |  1 | 0 | 1 | 0 | 1 |
+| 1024 | 512 | 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 
 `1024 + 256 + 64 + 16 + 4 + 1 = 1365`
 
