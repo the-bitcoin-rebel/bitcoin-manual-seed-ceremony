@@ -68,7 +68,7 @@ Add up only the column headings where you wrote a `1`. Ignore the columns where 
 
 `1024 + 256 + 64 + 16 + 4 + 1 = 1365`
 
-Write **1365** in the box at the end of row 1. That's the number you'll look up in `2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf` to find word 1 of your seed phrase.
+Write **1365** in the box after the `#`, at the end of row 1. That's the number you'll look up in `2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf` to find word 1 of your seed phrase. Once you've found it, write the word itself in the box after "Word:" at the end of the same row.
 
 In this example, decimal `1365` → binary `10101010101` → the word **primary**.
 
