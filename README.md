@@ -132,7 +132,7 @@ In the "Seed Words" grid, write words #1–24 exactly as they are numbered, copy
 
 ### Step 3: Wallet details
 
-Fill in the panel below the seed words:
+Fill in the panel below with these wallet details. Get them directly from your hardware wallet's screen, or from the watch-only wallet you've exported it to (e.g. Sparrow):
 
 | Field | What to write |
 |---|---|
