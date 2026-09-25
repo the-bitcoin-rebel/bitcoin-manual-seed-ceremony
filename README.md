@@ -30,7 +30,7 @@ Without this prior open-source and educational work, this project would not have
 
 ## How to Use `1-Binary-to-Decimal-Conversion-Table.pdf`
 
-This worksheet converts physical dice rolls into the numbers used to pick your seed words from `2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf`. Each of the 23 rows on the sheet corresponds to one seed word. Word 24 is **not** rolled. See the note below.
+This worksheet converts physical dice rolls into the numbers used to pick your seed words from `2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf`. Each of the first 23 rows on the sheet corresponds to one seed word. A 24th row lets you optionally add 3 bits of your own entropy for word 24, if your wallet supports it.
 
 ### What you need
 
@@ -43,18 +43,22 @@ This worksheet converts physical dice rolls into the numbers used to pick your s
 
 Do this offline, away from cameras and networked devices. See the [key ceremony procedure](./Bitcoin-Single-Sig-Key-Ceremony.pdf) for full operational security guidance.
 
-### Step 1: Convert each dice roll to a 0 or 1
+### Step 1: Convert each dice roll to bits
 
-Each row has 11 columns, headed `1024 512 256 128 64 32 16 8 4 2 1`. These are binary place values, together they let you write any number from 0 to 2047, which is exactly the range of the BIP-39 word list (2048 words, indexed 0–2047).
+Each row has 11 columns, headed `1024 | 512 | 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1`. These are binary place values, together they let you write any number from 0 to 2047, which is exactly the range of the BIP-39 word list (2048 words, indexed 0–2047).
 
-Roll once for every column, left to right, using several of your dice together and reading them off in a consistent order each time, and convert each roll using this key:
+Roll one die at a time and convert each roll using this key:
 
 | Die shows | Write |
 |---|---|
-| 1, 2, or 3 | `0` |
-| 4, 5, or 6 | `1` |
+| ⚀ 1 | `00` |
+| ⚁ 2 | `01` |
+| ⚂ 3 | `10` |
+| ⚃ 4 | `11` |
+| ⚄ 5 | `0` |
+| ⚅ 6 | `1` |
 
-Write the resulting `0` or `1` in the box above the matching column heading. By the time you reach the end of the row, you'll have 11 rolls converted into an 11-digit binary number.
+Fill in the boxes left to right with the bit(s) from each roll, in order, until all 11 boxes in the row are filled. Because some rolls give you 2 bits and some give you only 1, the number of rolls needed to fill a row varies. If a roll's bits don't all fit in the row's remaining boxes (for example, 1 box left and you roll a 1–4, which gives 2 bits), write as many of that roll's bits as fit in the current row, then carry the remaining bit over as the first box of the next row. Continue rolling for that next row from there, rather than starting it empty.
 
 ### Step 2: Convert the row to a decimal number
 
@@ -90,9 +94,11 @@ If you look at the list directly on GitHub ([bitcoin/bips — bip-0039/english.t
 
 `2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf` is built with this offset already accounted for, so as long as you use that table (not GitHub's line numbers) to look up your number, you'll get the correct word. This warning exists so that if you ever cross-check against the raw GitHub file, you don't get confused by the apparent mismatch and pick the wrong word.
 
-### Word 24: not rolled
+### Word 24: calculated by your hardware wallet
 
-Word 24 is not generated with dice. It contains the mandatory BIP-39 checksum bits, which can only be calculated mathematically from words 1–23, it isn't a free choice like the others. Once you've entered words 1–23 into a compatible hardware wallet (e.g. SeedSigner, Jade+, Foundation Passport, ColdCard), the device calculates and displays word 24 for you.
+Word 24 is not looked up in the reference table like the others, it's calculated by your device, not rolled by hand. It contains the mandatory BIP-39 checksum, derived mathematically from words 1–23.
+
+Some wallets let you add 3 bits of your own dice-rolled entropy for this word before they calculate the checksum. If yours does, use row 24 on the worksheet to roll those 3 bits and then enter words 1–23 plus this partial "word" into your device, and it will complete word 24 by calculating and appending the 8-bit checksum. If your wallet doesn't support manual entry for word 24, skip row 24, the device will generate the whole word for you.
 
 ### Why 1s, 2s, and 3s all mean "0"
 
