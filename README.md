@@ -23,10 +23,10 @@ Without this prior open-source and educational work, this project would not have
 
 | File | Purpose |
 |---|---|
-| [`1-Binary-to-Decimal-Conversion-Table.pdf`](./1-Binary-to-Decimal-Conversion-Table.pdf) | Worksheet for converting dice rolls into the numbers used to pick your seed words |
-| [`2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf`](./2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf) | Full BIP-39 word list indexed by decimal number (0–2047) |
-| [`3-Seed-Phrase-Paper-Backup.pdf`](./3-Seed-Phrase-Paper-Backup.pdf) | Temporary paper backup form for your seed words, to be transferred to steel |
-| [`Bitcoin-Single-Sig-Key-Ceremony.pdf`](./Bitcoin-Single-Sig-Key-Ceremony.pdf) | Full step-by-step procedure for a single-sig key ceremony, from preparation through funding test |
+| [`1-Binary-to-Decimal-Conversion-Table.pdf`](https://github.com/the-bitcoin-rebel/bitcoin-manual-seed-ceremony/blob/main/1-Binary-to-Decimal-Conversion-Table-v0.2.pdf) | Worksheet for converting dice rolls into the numbers used to pick your seed words |
+| [`2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf`](https://github.com/the-bitcoin-rebel/bitcoin-manual-seed-ceremony/blob/main/2-BIP-39-Decimal-Binary-Word-Reference-Table-v0.1.pdf) | Full BIP-39 word list indexed by decimal number (0–2047) |
+| [`3-Seed-Phrase-Paper-Backup.pdf`](https://github.com/the-bitcoin-rebel/bitcoin-manual-seed-ceremony/blob/main/3-Seed-Phrase-Paper-Backup-v0.2.pdf) | Temporary paper backup form for your seed words, to be transferred to steel |
+| [`Bitcoin-Single-Sig-Key-Ceremony.pdf`](https://github.com/the-bitcoin-rebel/bitcoin-manual-seed-ceremony/blob/main/Bitcoin-Single-Sig-Key-Ceremony-v0.2.pdf) | Full step-by-step procedure for a single-sig key ceremony, from preparation through funding test |
 
 ## How to Use `1-Binary-to-Decimal-Conversion-Table.pdf`
 
@@ -84,7 +84,7 @@ In this example, decimal `1365` → binary `10101010101` → the word **primary*
 
 Do the same for every remaining row: 11 fresh dice rolls per row, converted to a binary number, then added up into a single decimal number from 0–2047. Each row gives you the number for the corresponding seed word, row 2 gives you word 2, and so on through row 23.
 
-Write each word directly onto your [seed phrase backup sheet](./3-Seed-Phrase-Paper-Backup.pdf) (or steel backup) as you go, rather than waiting until the end.
+Write each word directly onto your [seed phrase backup sheet](https://github.com/the-bitcoin-rebel/bitcoin-manual-seed-ceremony/blob/main/3-Seed-Phrase-Paper-Backup-v0.2.pdf) (or steel backup) as you go, rather than waiting until the end.
 
 ### ⚠️ Critical: the word list is 0-indexed, not 1-indexed
 
@@ -176,7 +176,7 @@ The blank QR grid used on this form is adapted from Blockstream's [CompactSeedQR
 Once you've verified every word and the wallet details are correct:
 
 1. Copy everything: words, wallet details, and SeedQR, onto a fireproof, waterproof steel backup.
-2. Verify the steel backup against this paper copy, word by word. Beyond this visual check, also perform the full dry-run recovery described in the [key ceremony procedure](https://github.com/the-bitcoin-rebel/bitcoin-manual-seed-ceremony/blob/main/Bitcoin-Single-Sig-Key-Ceremony.pdf), restoring the seed from the steel backup into your device, to confirm the steel backup actually works, not just that it matches on paper. Once restored, export the wallet again (e.g. to Sparrow) and verify the addresses shown match the ones from your original setup.
+2. Verify the steel backup against this paper copy, word by word. Beyond this visual check, also perform the full dry-run recovery described in the [key ceremony procedure](https://github.com/the-bitcoin-rebel/bitcoin-manual-seed-ceremony/blob/main/Bitcoin-Single-Sig-Key-Ceremony-v0.2.pdf), restoring the seed from the steel backup into your device, to confirm the steel backup actually works, not just that it matches on paper. Once restored, export the wallet again (e.g. to Sparrow) and verify the addresses shown match the ones from your original setup.
 3. Since the wallet details (master fingerprint, derivation path, script type, xpub, zpub, first address, etc.) also already live in your password manager from Step 3, you don't strictly need to keep this paper form around afterward for that information, the only thing that must survive is the seed phrase itself on steel. If you'd still rather keep this paper as a secondary reference, that's fine, but getting a copy onto steel is the non-negotiable part.
 
 ### Never digitize this page
