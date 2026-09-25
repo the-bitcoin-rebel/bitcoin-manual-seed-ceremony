@@ -102,9 +102,9 @@ Word 24 is not looked up in the reference table like the others, it's calculated
 
 Some wallets let you add 3 bits of your own dice-rolled entropy for this word before they calculate the checksum. If yours does, use row 24 on the worksheet to roll those 3 bits and then enter words 1–23 plus this partial "word" into your device, and it will complete word 24 by calculating and appending the 8-bit checksum. If your wallet doesn't support manual entry for word 24, skip row 24, the device will generate the whole word for you.
 
-### Why 1s, 2s, and 3s all mean "0"
+### About this conversion method
 
-This sheet uses a fixed, unbiased mapping (dice faces 1–3 → `0`, faces 4–6 → `1`) rather than assigning individual faces to specific bit positions. This averages out any small manufacturing bias in a given die across three faces instead of resting on a single face, which is the more bias-resistant of the two common dice-to-bit methods. Using several dice from different manufacturers or styles, rolled in a cup or box rather than by hand, further reduces the chance that any single die's bias skews your results, no realistic manufacturing bias in an ordinary die comes close to affecting the security of the resulting seed, but these habits cost nothing and remove any doubt.
+We chose this per-face dice-to-bit mapping based on Valerio Vaccaro's TRMG project and his research comparing different dice-to-bit extraction methods, which found this style of mapping holds up better under die bias than the simple grouped mapping this project used previously. The full study and data are here: [dice_6_faces_experiment_ex2.ipynb](https://github.com/valerio-vaccaro/fair_dice/blob/main/dice_6_faces_experiment_ex2.ipynb).
 
 ## How to Use `2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf`
 
