@@ -28,6 +28,8 @@ Without this prior open-source and educational work, this project would not have
 | [`3-Seed-Phrase-Paper-Backup.pdf`](https://github.com/the-bitcoin-rebel/bitcoin-manual-seed-ceremony/blob/main/3-Seed-Phrase-Paper-Backup-v0.2.pdf) | Temporary paper backup form for your seed words, to be transferred to steel |
 | [`Bitcoin-Single-Sig-Key-Ceremony.pdf`](https://github.com/the-bitcoin-rebel/bitcoin-manual-seed-ceremony/blob/main/Bitcoin-Single-Sig-Key-Ceremony-v0.2.pdf) | Full step-by-step procedure for a single-sig key ceremony, from preparation through funding test |
 
+*Filenames are shown here without a version number for readability, each link points to the exact current version, and the [checksum table](#verify-file-integrity-sha-256) below always lists the precise versioned filename to check your download against.*
+
 ## How to Use `1-Binary-to-Decimal-Conversion-Table.pdf`
 
 This worksheet converts physical dice rolls into the numbers used to pick your seed words from `2-BIP-39-Decimal-Binary-Word-Reference-Table.pdf`. Each of the first 23 rows on the sheet corresponds to one seed word. A 24th row lets you optionally add 3 bits of your own entropy for word 24, if your wallet supports it.
