@@ -41,7 +41,7 @@ This worksheet converts physical dice rolls into the numbers used to pick your s
 - A pen
 - A calculator to add up the place values (a standalone calculator, never a phone connected to the internet), or you can add them up by hand
 
-Do this offline, away from cameras and networked devices. See the [key ceremony procedure](./Bitcoin-Single-Sig-Key-Ceremony.pdf) for full operational security guidance.
+Do this offline, away from cameras and networked devices. See the [key ceremony procedure](https://github.com/the-bitcoin-rebel/bitcoin-manual-seed-ceremony/blob/main/Bitcoin-Single-Sig-Key-Ceremony-v0.2.pdf) for full operational security guidance.
 
 ### Step 1: Convert each dice roll to bits
 
